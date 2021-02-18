@@ -1,10 +1,13 @@
-function reverseArray (...iArray) {
-    let oArray = [];
-    lastPos = iArray.length;
-    for (oArray in iArray) {
-        oArray.push(iArray[lastPos]);
+// script for reverseArray, reversing elements from function param. into new array.
+
+function reverseArray (...numbers) {
+    let result = [];
+    
+    while (numbers.length != 0) {
+        result.push(numbers.pop());
     }
-    console.log(oArray);
+   return result;     
 }
-reverseArray(1,2,3,4);
+
+console.log(reverseArray('a', 'b', 'c'));
 
